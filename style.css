@@ -174,14 +174,19 @@ a {
 ul {
   list-style: none;
 }
-@media screen and (max-width: 767px) {
-  .FirstView {
-      height: fit-content;
+@media screen and (max-width: 414px) {
+  main {
+      padding-top: 48px;
   }
 }
 .FirstView {
   position: relative;
   height: 739px;
+}
+@media screen and (max-width: 767px) {
+  .FirstView {
+      height: fit-content;
+  }
 }
 .FirstView__bg-image--left-rectangle {
   top: -70px;
@@ -200,20 +205,47 @@ ul {
   right: 0;
   width: 775px;
 }
-.FirstView__bg-image {
-  position: absolute;
-  z-index: -1;
-}
 .FirstViewContent__badge-image {
   position: absolute;
   top: -105px;
   right: -150px;
+}
+@media screen and (max-width: 767px) {
+  .FirstViewContent__badge-image {
+      height: 102px;
+      width: 102px;
+      top: -20px;
+      right: -85px;
+  }
+}
+.FirstView__bg-image {
+  position: absolute;
+  z-index: -1;
+}
+@media screen and (max-width: 767px) {
+  .FirstView__bg-image {
+      display: none;
+  }
 }
 img.lazy {
   min-height: 1px;
 }
 .FirstView__whole-image {
   display: none;
+}
+@media screen and (max-width: 767px) {
+  .FirstView__whole-image {
+      display: block;
+      margin-bottom: 7px;
+      width: 100%;
+  }
+}
+.FirstView__container {
+  max-width: 1040px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  padding-top: 219px;
 }
 @media screen and (max-width: 767px) {
   .FirstView__container {
@@ -231,24 +263,9 @@ img.lazy {
       padding-right: 36px;
   }
 }
-.FirstView__container {
-  max-width: 1040px;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  padding-top: 219px;
-}
 .FirstViewContent {
   position: relative;
   width: fit-content;
-}
-@media screen and (max-width: 767px) {
-  .FirstViewContent__title {
-      font-size: 22px;
-      line-height: 36px;
-      position: relative;
-      width: fit-content;
-  }
 }
 .FirstViewContent__title {
   color: #333;
@@ -257,6 +274,14 @@ img.lazy {
   font-weight: 800;
   line-height: 63px;
   margin-bottom: 16px;
+}
+@media screen and (max-width: 767px) {
+  .FirstViewContent__title {
+      font-size: 22px;
+      line-height: 36px;
+      position: relative;
+      width: fit-content;
+  }
 }
 .FirstViewContent__caption {
   font-size: 12px;
